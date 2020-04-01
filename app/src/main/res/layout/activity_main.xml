@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Layoutbanner"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="@drawable/banner"
+
+        >
+        <LinearLayout
+            android:background="@drawable/background_search"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:paddingLeft="80dp"
+                android:id="@+id/editext_search"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:hint="Nhập địa điểm..."
+                android:textColor="#000"
+                android:textStyle="italic" />
+
+            <ImageButton
+                android:id="@+id/btnsearch"
+                android:layout_gravity="center|right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_search" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/capsule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Layoutbanner"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:id="@+id/dexuat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gợi ý cho bạn"
+            android:textColor="#F04747"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:id="@+id/xemtatca"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:id="@+id/textxemall"
+                android:text="Xem tất cả"
+                android:textColor="#FF1F1F"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/textxemall"
+                android:src="@drawable/ic_airplanemode_active_black_24dp" />
+            <ImageView
+
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gachchan"
+                android:layout_below="@id/textxemall"
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/diadanh_noitieng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:text="Các địa điểm nổi tiếng"
+            android:layout_marginLeft="20sp"
+            android:textStyle="italic"
+            android:textSize="15dp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_marginLeft="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:text="Các biển-đảo nổi tiếng"
+            android:textStyle="italic"
+            android:textSize="15dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>
